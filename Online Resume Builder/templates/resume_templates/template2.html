@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Modern Resume</title></head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(#f0f4f7, #c6d8e6); padding: 40px;">
+  <div style="max-width: 800px; margin: auto; background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <h1 style="color: #2c3e50;">{{ data.name }}</h1>
+    <p><b>Email:</b> {{ data.email }} | <b>Contact:</b> {{ data.contact }}</p>
+    <h3 style="color: #34495e;">Objective</h3><p>{{ data.objective }}</p>
+    <h3 style="color: #34495e;">Education</h3><p>{{ data.education }}</p>
+    <h3 style="color: #34495e;">Skills</h3><p>{{ data.skills }}</p>
+    <h3 style="color: #34495e;">Experience</h3><p>{{ data.experience }}</p>
+    <h3 style="color: #34495e;">Co-Curricular</h3><p>{{ data.activities }}</p>
+    <h3 style="color: #34495e;">Achievements</h3><p>{{ data.achievements }}</p>
+    <h3 style="color: #34495e;">Projects</h3><p>{{ data.projects }}</p>
+    <h3 style="color: #34495e;">Certificates</h3><img src="/{{ cert_path }}" width="250px">
+    <p><b>LinkedIn:</b> <a href="{{ data.linkedin }}">{{ data.linkedin }}</a></p>
+    <p><b>GitHub:</b> <a href="{{ data.github }}">{{ data.github }}</a></p>
+    <br>
+    <a href="/download"><button style="padding:10px 20px">Download Resume</button></a>
+    <a href="/exit"><button style="padding:10px 20px">Exit</button></a>
+  </div>
+</body>
+</html>

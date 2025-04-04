@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>High Contrast Resume</title></head>
+<body style="background-color: black; color: white; font-family: 'Courier New'; padding: 40px;">
+  <div style="border: 3px solid white; padding: 30px; max-width: 900px; margin: auto;">
+    <h1 style="color: yellow;">{{ data.name }}</h1>
+    <p><b>Email:</b> {{ data.email }} | <b>Phone:</b> {{ data.contact }}</p>
+    <h2 style="color: orange;">Objective</h2><p>{{ data.objective }}</p>
+    <h2 style="color: orange;">Education</h2><p>{{ data.education }}</p>
+    <h2 style="color: orange;">Skills</h2><p>{{ data.skills }}</p>
+    <h2 style="color: orange;">Experience</h2><p>{{ data.experience }}</p>
+    <h2 style="color: orange;">Activities</h2><p>{{ data.activities }}</p>
+    <h2 style="color: orange;">Achievements</h2><p>{{ data.achievements }}</p>
+    <h2 style="color: orange;">Projects</h2><p>{{ data.projects }}</p>
+    <h2 style="color: orange;">Certificate</h2><img src="/{{ cert_path }}" width="300px">
+    <p style="color: lightblue;"><b>LinkedIn:</b> <a href="{{ data.linkedin }}" style="color: lightblue;">{{ data.linkedin }}</a></p>
+    <p style="color: lightblue;"><b>GitHub:</b> <a href="{{ data.github }}" style="color: lightblue;">{{ data.github }}</a></p>
+    <br>
+    <a href="/download"><button style="background: yellow; color: black; padding: 10px 20px">Download Resume</button></a>
+    <a href="/exit"><button style="background: white; color: black; padding: 10px 20px">Exit</button></a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Resume Form</title></head>
+<body style="background-color: #fafad2;">
+  <h2>Fill Your Resume Details</h2>
+  <form method="POST" enctype="multipart/form-data">
+    Name: <input type="text" name="name" required><br><br>
+    Contact: <input type="text" name="contact" required><br><br>
+    Email: <input type="email" name="email" required><br><br>
+    Objective: <textarea name="objective" required></textarea><br><br>
+    Education: <textarea name="education" required></textarea><br><br>
+    Skills: <textarea name="skills" required></textarea><br><br>
+    Experience: <textarea name="experience" required></textarea><br><br>
+    Co-Curricular Activities: <textarea name="activities" required></textarea><br><br>
+    Achievements: <textarea name="achievements" required></textarea><br><br>
+    Projects (GitHub Links): <textarea name="projects" required></textarea><br><br>
+    Upload Certificate (Image): <input type="file" name="certificate" required><br><br>
+    LinkedIn URL: <input type="url" name="linkedin" required><br><br>
+    GitHub URL: <input type="url" name="github" required><br><br>
+    Resume Template:
+    <select name="template">
+      <option value="template1">Classic</option>
+      <option value="template2">Modern</option>
+      <option value="template3">Professional</option>
+      <option value="template4">Double Column</option>
+      <option value="template5">High Contrast</option>
+    </select><br><br>
+    <input type="submit" value="Create Resume">
+  </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Double Column</title></head>
+<body style="background: #f2f2f2; font-family: Arial; padding: 20px;">
+  <div style="display: flex; max-width: 1000px; margin: auto;">
+    <div style="width: 35%; background-color: #d0e0e3; padding: 20px;">
+      <h2>{{ data.name }}</h2>
+      <p><b>Email:</b><br>{{ data.email }}</p>
+      <p><b>Contact:</b><br>{{ data.contact }}</p>
+      <p><b>LinkedIn:</b><br><a href="{{ data.linkedin }}">{{ data.linkedin }}</a></p>
+      <p><b>GitHub:</b><br><a href="{{ data.github }}">{{ data.github }}</a></p>
+      <p><b>Certificates:</b><br><img src="/{{ cert_path }}" width="100%"></p>
+    </div>
+    <div style="width: 65%; background-color: white; padding: 20px;">
+      <h3>Objective</h3><p>{{ data.objective }}</p>
+      <h3>Education</h3><p>{{ data.education }}</p>
+      <h3>Skills</h3><p>{{ data.skills }}</p>
+      <h3>Experience</h3><p>{{ data.experience }}</p>
+      <h3>Activities</h3><p>{{ data.activities }}</p>
+      <h3>Achievements</h3><p>{{ data.achievements }}</p>
+      <h3>Projects</h3><p>{{ data.projects }}</p>
+      <br>
+      <a href="/download"><button>Download Resume</button></a>
+      <a href="/exit"><button>Exit</button></a>
+    </div>
+  </div>
+</body>
+</html>
