@@ -1,21 +1,119 @@
 <!DOCTYPE html>
-<html>
-<head><title>Resume</title></head>
-<body style="font-family: Arial; background-color: #e6f7ff; padding: 30px;">
-  <h1>{{ data.name }}</h1>
-  <p><b>Email:</b> {{ data.email }}</p>
-  <p><b>Contact:</b> {{ data.contact }}</p>
-  <h3>Objective</h3><p>{{ data.objective }}</p>
-  <h3>Education</h3><p>{{ data.education }}</p>
-  <h3>Skills</h3><p>{{ data.skills }}</p>
-  <h3>Experience</h3><p>{{ data.experience }}</p>
-  <h3>Co-Curricular Activities</h3><p>{{ data.activities }}</p>
-  <h3>Achievements</h3><p>{{ data.achievements }}</p>
-  <h3>Projects</h3><p>{{ data.projects }}</p>
-  <h3>Certificates</h3><img src="/{{ cert_path }}" width="300px">
-  <h3>LinkedIn</h3><a href="{{ data.linkedin }}" target="_blank">{{ data.linkedin }}</a><br>
-  <h3>GitHub</h3><a href="{{ data.github }}" target="_blank">{{ data.github }}</a><br><br>
-  <a href="/download"><button>Download Resume</button></a>
-  <a href="/exit"><button>Exit</button></a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Resume</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #6a11cb;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #2575fc;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    a {
+      color: #6a11cb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      border: 2px solid #6a11cb;
+      border-radius: 10px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 5px;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <h1>{{ data.name }}</h1>
+    <p><b>Email:</b> {{ data.email }}</p>
+    <p><b>Contact:</b> {{ data.contact }}</p>
+    <h3>Objective</h3>
+    <p>{{ data.objective }}</p>
+    <h3>Education</h3>
+    <p>{{ data.education }}</p>
+    <h3>Skills</h3>
+    <p>{{ data.skills }}</p>
+    <h3>Experience</h3>
+    <p>{{ data.experience }}</p>
+    <h3>Co-Curricular Activities</h3>
+    <p>{{ data.activities }}</p>
+    <h3>Achievements</h3>
+    <p>{{ data.achievements }}</p>
+    <h3>Projects</h3>
+    <p>{{ data.projects }}</p>
+    <h3>Certificates</h3>
+    <img src="/{{ cert_path }}" width="300px" alt="Certificate">
+    <h3>LinkedIn</h3>
+    <a href="{{ data.linkedin }}" target="_blank">{{ data.linkedin }}</a>
+    <h3>GitHub</h3>
+    <a href="{{ data.github }}" target="_blank">{{ data.github }}</a>
+    <div class="button-container">
+      <a href="/download"><button>Download Resume</button></a>
+      <a href="/exit"><button>Exit</button></a>
+    </div>
+  </div>
 </body>
 </html>
